@@ -34,7 +34,7 @@ public class ItemListController {
 			throw e;
 		}
 	}
-	@GetMapping("/getList/{id}")
+	@GetMapping("/getList/id={id}")
 	private JSONResult getDetail(@PathVariable("id") long id) {
 		try {
 			SiteItem siteItem = service.getDetail(id);
