@@ -22,5 +22,3 @@ public class ItemService {
 		return itemDao.getItemById(id);
 	}
 }
-
-//try

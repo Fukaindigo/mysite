@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.site.dao.ItemDao">
 	<select id="getList" resultType="java.util.HashMap">
-		SELECT * FROM siteitem
+		SELECT * FROM siteItem
 	</select>
 
 	<select id="getItemById" resultType="com.site.enitity.SiteItem">
-		SELECT * FROM siteitem
+		SELECT * FROM siteItem
 		WHERE
 		itemCode = #{id}
 	</select>

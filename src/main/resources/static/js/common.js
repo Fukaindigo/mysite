@@ -16,5 +16,5 @@ function showTimeFull(updateTime) {
 
 function calTax(price) {
 	var tax = 0.1;
-	return price * (1 + tax);
+	return Math. floor(price * (1 + tax));
 }

@@ -93,7 +93,6 @@ function placeOrder() {
 				$("#message").addClass("error");
 			}
 
-
 		},
 		error: function() {
 			$("#message").html("注文失敗しました。");

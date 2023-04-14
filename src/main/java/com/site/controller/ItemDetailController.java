@@ -1,7 +1,5 @@
 package com.site.controller;
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,23 +11,20 @@ import com.site.service.ItemService;
 import com.site.utils.JSONResult;
 
 @RestController
-public class ItemListController {
-	private final static Logger logger = LoggerFactory.getLogger(ItemListController.class);
+public class ItemDetailController {
+
+	private final static Logger logger = LoggerFactory.getLogger(ItemDetailController.class);
 
 	@Autowired
 	private ItemService service;
 
-	@GetMapping("/getList")
-	private JSONResult getList() {
-
+	@GetMapping("/detail")
+	private JSONResult getDetail(long id) {
 		try {
-			List<SiteItem> e = service.getList();
-			if (e != null)
-				logger.info("Get item list {} records", e.size());
+			SiteItem e = service.getDetail(id);
 			return JSONResult.ok(e);
-
 		} catch (Exception e) {
-			logger.error("Get item list failed.");
+			logger.error("Get item detail failed.");
 			throw e;
 		}
 	}
