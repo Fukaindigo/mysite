@@ -18,6 +18,7 @@ $(document).ready(function() {
 
 function getDetail(id) {
 	$.ajax({
+		// 异步调用 -- 这里没有，如果有就会不管返回直接执行后续操作
 		type: "get",
 		url: root + "/detail?id=" + id,
 		success: function(data) {

@@ -48,7 +48,7 @@ public class JSONResult {
 	}
 
 	public static JSONResult noObject() {
-		return new JSONResult(200, "object not exist", null);
+		return new JSONResult(203, "object not exist", null);
 	}
 
 	public static JSONResult noStock() {

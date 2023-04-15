@@ -23,6 +23,7 @@ public class ItemOrderController {
 	@PostMapping(value = "/order")
 	private JSONResult placeOrder(@RequestParam("itemCode") long itemCode, @RequestParam("num") int num) {
 		final float TAX = 0.1f;
+		//属性可以放到额外的文件夹 -- 进行统一调配
 
 		try {
 
